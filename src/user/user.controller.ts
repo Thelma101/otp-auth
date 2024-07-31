@@ -5,12 +5,10 @@ import { CreateUserDto } from './dto/createUserDto';
 export class UserController {
 
     @Get(':id')
-    findAll(@Param("id") id:string ) {
+    findOne(@Param("id") id:string ) {
         return ({
             user: {
-                id: id,
-                name: "John Doe",
-                email: "john.doe@example.com"
+                id: id
             }
         })
     }
