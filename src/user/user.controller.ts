@@ -5,7 +5,7 @@ import { UserService } from './user.service';
 @Controller('user')
 export class UserController {
 
-    constructor (private readonly userService: UserService, ) { }
+    constructor (private readonly userService: UserService, private readonly commentService: UserService) { }
     @Get(':id')
     findOne(@Param('id') id:string ) {
         return this.userService.findOne(id);
@@ -16,7 +16,7 @@ export class UserController {
     }
 
     @Get(":id/comments")
-    getUserComment(@Param("id") id:string){
-        return
+    getUserComment(@Param('id') id:string){
+        return this.commentService.findUserComments(id);
     }
 }
