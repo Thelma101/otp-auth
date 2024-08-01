@@ -1,4 +1,5 @@
 import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { bcrypt } from "bcrypt";
 
 
 @Entity()
