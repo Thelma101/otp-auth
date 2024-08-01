@@ -1,5 +1,7 @@
 import { User } from "src/entities/user.entity";
 import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 
 const config: PostgresConnectionOptions = {
@@ -14,3 +16,4 @@ const config: PostgresConnectionOptions = {
 }
 
 export default config;
+
