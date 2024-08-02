@@ -7,16 +7,19 @@ import { User } from 'src/entities/user.entity';
 @Injectable()
 export class UserService {
 
-    constructor(@InjectRepository [User] private readonly userRepo: Repository<User>,) { }
-    findOne(id: string) {
-        return {
-            id: id,
-        };
+    constructor(
+        @InjectRepository(User) private readonly userRepo: Repository<User>,
+
+    ) { }
+   async findOne(id: number) {
+    return await this.userRepo.findOne({where:{ id: id}});
+
     }
 
-    create(createUserDto: CreateUserDto) {
-        return "the user has been created successfully";
-        // return this.userService.create(createUserDto)
+    async create(createUserDto: CreateUserDto) {
+        
+    const user = await this.userRepo.create(createUserDto);
+    return await this.userRepo.save(user);
 
     }
 }

@@ -9,7 +9,7 @@ export class UserController {
     constructor(private readonly userService: UserService, private readonly commentService: CommentService) { }
 
     @Get(':id')
-    findOne(@Param('id') id: string) {
+    findOne(@Param('id') id: number) {
         return this.userService.findOne(id);
     }
     @Post()
