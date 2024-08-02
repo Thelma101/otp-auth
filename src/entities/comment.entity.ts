@@ -6,7 +6,7 @@ import { Topic } from "./topic.entity";
 export class Comment {
 
     @PrimaryGeneratedColumn()
-    id:string;
+    id:number;
 
     @Column()
     text:string;
