@@ -19,7 +19,7 @@ dotenv.config();
 
 const config: PostgresConnectionOptions = {
     type: 'postgres',
-    host: '127.0.0.1',
+    host: 'db',
     port: 5432,
     username: 'postgres',
     password: 'postgres',
