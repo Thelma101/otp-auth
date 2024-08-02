@@ -11,7 +11,6 @@ export class Comment {
     @Column()
     text:string;
 
-    // @ManyToOne(() => User, user => user.comments)
     @ManyToOne((type) => User, (user) => user.comments)
     user:User;
 
