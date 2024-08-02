@@ -1,6 +1,8 @@
 import { User } from "src/entities/user.entity";
 import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
 import * as dotenv from 'dotenv';
+import { Comment } from "src/entities/comment.entity";
+import { Topic } from "src/entities/topic.entity";
 dotenv.config();
 
 
@@ -11,7 +13,7 @@ const config: PostgresConnectionOptions = {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    entities: [User],
+    entities: [User, Comment, Topic],
     synchronize: true
 }
 
