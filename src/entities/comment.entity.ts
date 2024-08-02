@@ -15,7 +15,7 @@ export class Comment {
     @ManyToOne((type) => User, (user) => user.comments)
     user:User;
 
-    @Column()
+    @ManyToOne((type) => Topic, (topic) => topic.comments)
     topic:Topic;
 
 }
