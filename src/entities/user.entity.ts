@@ -1,5 +1,6 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { bcrypt } from "bcrypt";
+import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+// import { bcrypt } from 'bcrypt';
+import * as bcrypt from 'bcrypt';
 
 
 @Entity()
