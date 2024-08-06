@@ -12,7 +12,7 @@ export class Comment {
     text:string;
 
     // @ManyToOne((type) => User, (user) => user.comments)
-    @ManyToOne((type) => User, (user) => user.comments)
+    @ManyToOne(() => User, (user) => user.comments)
     user:User;
 
     // @ManyToOne((type) => Topic, (topic) => topic.comments)
